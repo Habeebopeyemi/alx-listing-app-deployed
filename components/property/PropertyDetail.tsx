@@ -1,4 +1,5 @@
 import { PropertyProps } from "@/interfaces/index";
+import Image from "next/image";
 
 const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
   property,
@@ -15,7 +16,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
 
       {/* Image Grid */}
       <div className="grid grid-cols-2 gap-4 mt-4">
-        <img
+        <Image
           src={property.image}
           alt={property.name}
           className="col-span-2 w-full h-96 object-cover rounded-lg"
@@ -31,10 +32,14 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
 
       {/* Amenities */}
       <div className="mt-4">
-        <h2 className="text-2xl text-gray-500 font-semibold">What this place offers</h2>
+        <h2 className="text-2xl text-gray-500 font-semibold">
+          What this place offers
+        </h2>
         <ul className="flex flex-wrap space-x-4">
           {property.category.map((amenity, index) => (
-            <li key={index} className="bg-gray-200 text-amber-950 p-2 rounded-md">
+            <li
+              key={index}
+              className="bg-gray-200 text-amber-950 p-2 rounded-md">
               {amenity}
             </li>
           ))}

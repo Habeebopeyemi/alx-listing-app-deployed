@@ -92,7 +92,7 @@ const Header: React.FC = () => {
         </div>
       </div>
       <ul className="w-full flex justify-evenly bg-white gap-2 px-5 py-2 overflow-hidden">
-        {ACCOMMODATIONCATEGORIES.map((type: AccommodationTypes, _: number) => {
+        {ACCOMMODATIONCATEGORIES.map((type: AccommodationTypes) => {
           return (
             <li
               key={type.id}

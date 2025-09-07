@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 px-5 md:basis-[70%] md:my-6">
-            {FooterData.map((footer, index) => (
+            {FooterData.map(footer => (
               <>
                 <div key={footer.title} className="mb-4">
                   <h3 className="font-extrabold mb-2">{footer.title}</h3>
